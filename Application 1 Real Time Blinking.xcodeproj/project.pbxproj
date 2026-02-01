@@ -12,6 +12,7 @@
 		3456E0C92F2FDA0C00822CFF /* sdkconfig.old */ = {isa = PBXFileReference; lastKnownFileType = text; path = sdkconfig.old; sourceTree = "<group>"; };
 		3456E0CF2F2FDBCA00822CFF /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		3456E0E82F2FF94F00822CFF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		3456E0E92F3006CA00822CFF /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -27,6 +28,7 @@
 			isa = PBXGroup;
 			children = (
 				3456E0C42F2FDA0C00822CFF /* CMakeLists.txt */,
+				3456E0E92F3006CA00822CFF /* readme.md */,
 				3456E0C72F2FDA0C00822CFF /* main */,
 				3456E0C82F2FDA0C00822CFF /* sdkconfig */,
 				3456E0C92F2FDA0C00822CFF /* sdkconfig.old */,
