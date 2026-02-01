@@ -20,7 +20,8 @@ XCODE_ERROR_FORMAT='s#^(.+):([0-9]+):([0-9]+): (error|warning):#\1:\2:\3: \4:#'
 case "$1" in
     flash)
         echo "--- Flashing ESP32 ---"
-        idf.py build flash | sed -E "$XCODE_ERROR_FORMAT"
+        idf.py build | sed -E "$XCODE_ERROR_FORMAT"
+        idf.py flash
         ;;
     clean)
         echo "--- Cleaning Project ---"

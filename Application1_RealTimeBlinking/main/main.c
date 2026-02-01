@@ -1,7 +1,7 @@
-/*
- * SPDX-FileCopyrightText: 2010-2022 Espressif Systems (Shanghai) CO LTD
+/**
  *
- * SPDX-License-Identifier: CC0-1.0
+ *
+ *
  */
 
 #include <stdio.h>
@@ -21,8 +21,6 @@ void print_task(void *pvParameters);
 
 void app_main(void)
 {
-  printf("Hello world!\n");
-  
   gpio_reset_pin(LED_PIN);
   gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
   
