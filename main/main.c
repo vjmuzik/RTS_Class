@@ -14,33 +14,33 @@
 #include "esp_system.h"
 #include "driver/gpio.h"
 
-#define LED_PIN 2
+#define BEACON_PIN 2
 
-void blink_task(void *pvParameters);
-void print_task(void *pvParameters);
+void status_beacon_task(void *pvParameters);
+void status_print_task(void *pvParameters);
 
 void app_main(void)
 {
-  gpio_reset_pin(LED_PIN);
-  gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
+  gpio_reset_pin(BEACON_PIN);
+  gpio_set_direction(BEACON_PIN, GPIO_MODE_OUTPUT);
   
-  xTaskCreate(blink_task, "BlinkTask", 2048, NULL, 1, NULL);
-  xTaskCreate(print_task, "PrintTask", 2048, NULL, 1, NULL);
+  xTaskCreate(status_beacon_task, "StatusBeaconTask", 2048, NULL, 1, NULL);
+  xTaskCreate(status_print_task, "StatusPrintTask", 2048, NULL, 1, NULL);
 }
 
-void blink_task(void *pvParameters) {
-  bool state = false;
+void status_beacon_task(void *pvParameters) {
+  bool beacon_status = false;
   while(1) {
-    state = !state;
-    gpio_set_level(GPIO_NUM_2, state);
+    beacon_status = !beacon_status;
+    gpio_set_level(BEACON_PIN, beacon_status);
     
     vTaskDelay(pdMS_TO_TICKS(250));
   }
 }
 
-void print_task(void *pvParameters) {
+void status_print_task(void *pvParameters) {
   while(1) {
-    printf("System alive, time=%lu ms\n", (unsigned long)(xTaskGetTickCount()*portTICK_PERIOD_MS));
+    printf("System status: alive    Uptime: %lu ms\n", (unsigned long)(xTaskGetTickCount()*portTICK_PERIOD_MS));
     vTaskDelay(pdMS_TO_TICKS(10000));
   }
 }
