@@ -25,4 +25,4 @@ The Green LED represents active communication with the machine reading the patie
 ## Q7 [Bonus] Induced Failure: 
 Yes I can, basically I upped the number of times the sensor is read and printed everytime it's read so it hogs the hardware for quite a bit of time, especially while the knob is moving.
 
-![Mission Debrief Slides Voiceover](MissionDebrief.mov)
+https://github.com/user-attachments/assets/3044fbf5-8f42-4e0a-a3d2-fd89b03272be
