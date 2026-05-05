@@ -2,6 +2,12 @@
 
 ![JPG of the ESP32 and components on it's breadboard](extras/ESP32Breadboard.jpg)
 
+
+
+
+https://github.com/user-attachments/assets/25d075ed-5e46-46ac-b265-2fb92eee63b0
+
+
 Bonus:
 A minor delay in the logger task  and disabling the interrupt until the log has been made handles potential mechanical bouncing on the button to prevent immediate re-triggering of the semaphore
 Better to implemenet harware debugging with a low-pass filter and schmitt trigger for more robustness
