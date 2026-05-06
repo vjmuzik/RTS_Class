@@ -58,6 +58,10 @@
  =================================================================================================
 ```
 
+
+https://github.com/user-attachments/assets/9990892a-3b2a-47f3-94d0-b3a7fdec1981
+
+
 # Analysis/Engineering
 
 ## Scheduler Fit: How do your task priorities / RTOS settings guarantee every H task’s deadline in Wokwi? Cite one timestamp pair that proves it.
